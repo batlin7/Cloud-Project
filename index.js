@@ -1,6 +1,5 @@
 const exp = require('express');
 const path = require('path/posix');
-const ip = require('IP.js');
 
 const app = exp();
 const port = process.env.PORT || 5000
