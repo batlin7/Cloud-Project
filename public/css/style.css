@@ -85,13 +85,14 @@ transition: visibility 2s;
 
 @media only screen and (max-width: 1080px) {
     body {
-      width: 90%;
+      width: auto;
+      height: auto;
     }
     .msg{
         font-size: medium;
         padding-top: 10%;
         min-width: 20%;
-        max-width: 80%;
+        max-width: 95%;
         margin: 5%;
         margin-top: 0%;
     }
