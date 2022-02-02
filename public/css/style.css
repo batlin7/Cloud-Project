@@ -68,7 +68,8 @@ transition: visibility 2s;
 
 @media only screen and (max-width: 768px) {
     body {
-      width: 90%;
+      width: auto;
+      height: auto;
     }
     .msg{
         font-size: medium;
@@ -103,7 +104,8 @@ transition: visibility 2s;
 
 @media only screen and (max-width: 750px) {
     body {
-      width: 90%;
+      width: auto;
+      height: auto;
     }
     .msg{
         font-size: medium;
