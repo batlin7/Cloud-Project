@@ -89,7 +89,7 @@ transition: visibility 2s;
         padding-top: 5%;
     }
     .img_container img{
-        width: 80%;
+        width: auto;
         height: inherit;
         margin-right: auto;
         margin-left: auto;
@@ -119,7 +119,7 @@ transition: visibility 2s;
         padding-top: 5%;
     }
     .img_container img{
-        width: 80%;
+        width: auto;
         height: inherit;
         margin-right: auto;
         margin-left: auto;
@@ -149,7 +149,7 @@ transition: visibility 2s;
         padding-top: 5%;
     }
     .img_container img{
-        width: 80%;
+        width: auto;
         height: inherit;
         margin-right: auto;
         margin-left: auto;
