@@ -1,5 +1,5 @@
 $(document).ready(function(){
     $("span").click(function(){
-      alert(atob('Q29uZ3JhdHVsYXRpb25zISBmb2xsb3cgeW91ciBsZWFkOiBodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWRRdzR3OVdnWGNRJmFiX2NoYW5uZWw9Umlja0FzdGxleQ=='));
+      alert(atob('Q29uZ3JhdHVsYXRpb24s') + "\n" + atob('WW91IGhhdmUgY29tcGxldGVkIHRoZSB0ZXN0Lg==') + "\n" + atob('Zm9sbG93IHlvdXIgbGVhZDogaHR0cHM6Ly9jZW50aXBlZGUtNi5oZXJva3VhcHAuY29tL25vbmJpbmFyeQ=='));
     });
   });
