@@ -12,27 +12,33 @@ app.use(exp.static(path.join(__dirname,'public')))
 
 //Styles
 app.use('/hello',exp.static(path.join(__dirname + '/public/css')))
-
 //Javascripts
 app.use('/scripts',exp.static(path.join(__dirname + '/public/javascript')))
 
+
 //BinaryBrothers
 app.use('/nonbinary',exp.static(path.join(__dirname + '/public/puzzle-1')))
-
+// !
+// V 
 //MorseCode
 app.use('/Samuel_Morse',exp.static(path.join(__dirname + '/public/puzzle-3')))
-
+// !
+// V 
 //RGB
 app.use('/false_color',exp.static(path.join(__dirname + '/public/puzzle-2')))
-
+// !
+// V 
 //part-by-part
+// !
+// V 
 //illusion
-
+// !
+// V 
 //Final
 app.use('/get_it_done',exp.static(path.join(__dirname + '/public/final')))
 
 
 //Hello Users
 app.use('/hi',function(req, res){
-    res.send("Hello Thier!")
+    res.send("Hello Their!")
 })
