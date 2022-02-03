@@ -1,9 +1,7 @@
 const { MongoClient } = require('mongodb');
 const fetch = require('node-fetch');
 
-var datetime = new Date();
-
-async function main() {
+async function main(phare, key) {
 
   const uri = "mongodb+srv://test1hello:3rZzGLm4dimFHam@testdb-01.oupbs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
   const client = new MongoClient(uri);
@@ -15,10 +13,13 @@ async function main() {
       //Get client IP address
       const C_ID = await clientID();
       console.log(C_ID);
+      console.log(Date());
 
       await createnewdata(client, {
         User_ID : C_ID,
-        date : datetime
+        Phare : phare,
+        Key : key, 
+        date : Date()
         })
       } catch (e) {
       console.error(e);
@@ -31,7 +32,7 @@ async function main() {
 
 //Client IP address function
 async function clientID(){
-const response = await fetch('http://ip-api.com/json');
+const response = await fetch('https://json.geoiplookup.io/');
 const data = await response.json();
 
 return data;
@@ -44,4 +45,6 @@ const result = await client.db("CentipedeUser").collection("Players").insertOne(
 console.log(`Inserted Id: ${result.insertedId}`);
 }
 
-main().catch(console.error);
+module.exports = { clientID , main };
+
+//main().catch(console.error);

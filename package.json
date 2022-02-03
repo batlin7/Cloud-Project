@@ -15,6 +15,8 @@
   "author": "Sanju",
   "license": "Test",
   "dependencies": {
+    "body-parser": "^1.19.1",
+    "crypto": "^1.0.1",
     "express": "^4.17.2",
     "fs": "^0.0.1-security",
     "mongodb": "^4.3.1",

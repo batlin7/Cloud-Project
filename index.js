@@ -1,5 +1,14 @@
 const exp = require('express');
 const path = require('path/posix');
+const bodyParser = require('body-parser')
+var crypto = require('crypto');
+const getIP = require("./IP");
+
+function key() {
+    // 16 bytes is likely to be more than enough,
+    // but you may tweak it to your needs
+    return crypto.randomBytes(16).toString('base64');
+};
 
 const app = exp();
 const port = process.env.PORT || 5000
@@ -25,7 +34,7 @@ app.use('/Samuel_Morse',exp.static(path.join(__dirname + '/public/puzzle-3')))
 // !
 // V 
 //RGB
-app.use('/false_color',exp.static(path.join(__dirname + '/public/puzzle-2')))
+app.use('/falsecolor',exp.static(path.join(__dirname + '/public/puzzle-2')))
 // !
 // V 
 //part-by-part
@@ -35,7 +44,61 @@ app.use('/false_color',exp.static(path.join(__dirname + '/public/puzzle-2')))
 // !
 // V 
 //Final
-app.use('/get_it_done',exp.static(path.join(__dirname + '/public/final')))
+app.use('/getitdone',exp.static(path.join(__dirname + '/public/final')))
+
+app.use(bodyParser.urlencoded({extended: true}));
+
+var validcode = [['C','O','D','E','S'],
+                ['T','O','U','C','H'],
+                ['R','E','A','D','Y'],
+                ['P','E','A','R','S'],
+                ['C','H','I','E','F']];
+
+var sercrtidiom = ["The best of both worlds",
+"Speak of the devil",
+"See eye to eye",
+"Once in a blue moon",
+"When pigs fly",
+"To cost an arm and a leg",
+"A piece of cake",
+"Let the cat out of the bag",
+"To feel under the weather",
+"To kill two birds with one stone",
+"To cut corners",
+"To add insult to injury",
+"You can't judge a book by its cover",
+"Break a leg",
+"To hit the nail on the head",
+"A blessing in disguise",
+"Call it a day",
+"Let someone off the hook",
+"No pain no gain",
+"Bite the bullet",
+"Getting a taste of your own medicine",
+"Giving someone the cold shoulder",
+"The last straw",
+"The elephant in the room",
+"Stealing someones thunder"];
+
+app.post('/getitdone',async function(req, res){
+    var code = req.body.secret;
+    var newcode = code.toUpperCase();
+    var count=0;   
+    for(var i=0;i<5;i++){
+            for(var j=0;j<5;j++){
+            if(newcode[i]==validcode[i][j]){
+                count++;
+            }
+            }}
+    if(count==5){
+        var done = key();
+        var Pharse = sercrtidiom[parseInt(Math.random() * 10)];
+        getIP.main(Pharse, done).catch(console.error);
+        res.send("Conguralation,<br> you have completed all our tests. Send us a mail with This '<b>" +Pharse+".'</b> Pharse and Your ID: <b>"+ done +"</b>");
+    }else{
+        res.send("404 Error!");
+    }
+})
 
 
 //Hello Users
