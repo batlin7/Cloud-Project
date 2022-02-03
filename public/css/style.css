@@ -80,8 +80,8 @@ transition: visibility 2s;
         margin-top: 0%;
     }
     .tooltip .tooltiptext{
-        margin: auto;
-        width: 50%;
+        margin-top: 100%;
+        font-size: 15px;
     }
     .img_container{
         width: 90%;
@@ -112,6 +112,7 @@ transition: visibility 2s;
     }
     .tooltip .tooltiptext{
         margin-top: 100%;
+        font-size: 15px;
     }
     .img_container{
         width: 90%;
@@ -142,6 +143,7 @@ transition: visibility 2s;
     }
     .tooltip .tooltiptext{
         margin-top: 100%;
+        font-size: 15px;
     }
     .img_container{
         width: 90%;
