@@ -156,16 +156,3 @@ transition: visibility 2s;
         display: block;
     }
 }
-
-.img_container{
-    width: 100%;
-    height: auto;
-    padding-top: 5%;
-}
-.img_container img{
-    width: 38%;
-    height: inherit;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-}
