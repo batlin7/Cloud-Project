@@ -2,7 +2,7 @@ const exp = require('express');
 const path = require('path/posix');
 const bodyParser = require('body-parser')
 var crypto = require('crypto');
-const getIP = require("./IP");
+const record = require("./IP");
 
 function key() {
     // 16 bytes is likely to be more than enough,
@@ -81,7 +81,9 @@ var sercrtidiom = ["The best of both worlds",
 "Stealing someones thunder"];
 
 app.post('/getitdone',async function(req, res){
-    var code = req.body.secret;
+    const code = req.body.secret;
+    const addr = req.body.des;
+    const Udate = req.body.Udate;
     var newcode = code.toUpperCase();
     var count=0;   
     for(var i=0;i<5;i++){
@@ -93,7 +95,10 @@ app.post('/getitdone',async function(req, res){
     if(count==5){
         var done = key();
         var Pharse = sercrtidiom[parseInt(Math.random() * 10)];
-        getIP.main(Pharse, done).catch(console.error);
+        record.main(Pharse, done, addr, Udate).catch(console.error);
+        //record.clientID(addr);
+        //console.log(req.body);
+        console.log(Udate);
         res.send("Conguralation,<br> you have completed all our tests. Send us a mail with This '<b>" +Pharse+".'</b> Pharse and Your ID: <b>"+ done +"</b>");
     }else{
         res.send("404 Error!");

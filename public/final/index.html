@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>I_am_Genius</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I_am_Genius</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script src="/javascript/clientIP.js"></script>
     <style>.form__group {
         position: relative;
         padding: 15px 0 0;
@@ -64,10 +65,12 @@
 </head>
 <body>
     <div class="msg">
-        <p>Congralution, You have passed all the test enter the code for same.</p>
+        <p>Congralution, You have passed all the test now enter the code for same.</p>
         <form action="/getitdone" method="POST">
             <div class="form__group field">
                 <input type="text" class="form__field" placeholder="Enter Code..." name="secret" required />
+                <input type="hidden" name="des" id="CIP"/>
+                <input type="hidden" name="Udate" id="day"/>
                 <label for="name" class="form__label">Enter Code..</label>
                 <button type="submit" name="submit"><i class="fa fa-arrow-right"></i></button>
               </div>
