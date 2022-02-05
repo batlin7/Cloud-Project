@@ -50,9 +50,9 @@ app.use('/getitdone',exp.static(path.join(__dirname + '/public/final')))
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-var validcode = [['C','O','D','E','S'],
-                ['T','O','U','C','H'],
+var validcode = [['T','O','U','C','H'],
                 ['R','E','A','D','Y'],
+                ['C','O','D','E','S'],
                 ['P','E','A','R','S'],
                 ['C','H','I','E','F']];
 
