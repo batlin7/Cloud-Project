@@ -20,9 +20,11 @@ app.use(exp.static('public'))
 app.use(exp.static(path.join(__dirname,'public')))
 
 //Styles
-app.use('/hello',exp.static(path.join(__dirname + '/public/css')))
+app.use('/stylesheet',exp.static(path.join(__dirname + '/public/css')))
 //Javascripts
 app.use('/scripts',exp.static(path.join(__dirname + '/public/javascript')))
+//Images
+app.use('/img',exp.static(path.join(__dirname + '/public/images')))
 
 
 //BinaryBrothers

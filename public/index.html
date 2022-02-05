@@ -7,10 +7,33 @@
     <title>centipede0722@ccmail.uk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/javascript/try.js"></script>
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script src="/scripts/try.js"></script>
+    <link rel="stylesheet" href="/stylesheet/style.css" type="text/css">
+    <script>
+        var images = ['/img/C.png',
+                        '/img/O.png',
+                        '/img/D.png',
+                        '/img/E.png',
+                        '/img/S.png'];
+
+        var img = document.getElementById('code');
+        var num = Math.floor(Math.random() * images.length);
+        img.style.backgroundImage = 'url("'+ images[num] + '")"';
+        console.log(bg);
+    </script>
+    <style>
+        .code{
+        background-image: url();
+        background-repeat: repeat repeat;
+        background-size: 10%;
+        width: 100%;
+        height: 100%;
+        color: white;
+        }
+    </style>
 </head>
 <body>
+    <section id="code" class="code">
     <div class="msg">
         <h2>Hello,</h2>
         <br>We are looking for highly intelligent individuals. To find them, we have devised a test. There is a <div class="tooltip">hidden message<span class="tooltiptext">Hello, I'm here!</span></div> in this.
@@ -18,5 +41,6 @@
         <br><br>Good luck.
         <br><br>#centipede
     </div>
+    </section>
 </body>
 </html>
