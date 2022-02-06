@@ -87,6 +87,9 @@ app.post('/getitdone',async function(req, res){
     const addr = req.body.des;
     const Udate = req.body.Udate;
     var newcode = code.toUpperCase();
+    if(newcode.length != 5){
+        res.send("Error!");
+    }else{
     var count=0;   
     for(var i=0;i<5;i++){
             for(var j=0;j<5;j++){
@@ -105,6 +108,7 @@ app.post('/getitdone',async function(req, res){
     }else{
         res.send("404 Error!");
     }
+}
 })
 
 
