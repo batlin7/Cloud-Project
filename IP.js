@@ -12,7 +12,6 @@ async function main(phare, key, addr, Udate) {
 
       //Get client IP address
       const C_ID = await clientID(addr);
-      console.log(C_ID);
       console.log(Udate);
 
       await createnewdata(client, {
@@ -32,6 +31,7 @@ async function main(phare, key, addr, Udate) {
 //Client IP address function
 async function clientID(useraddr){
 const u = 'https://json.geoiplookup.io/'+ useraddr ;
+console.log(u);
 const response = await fetch(u);
 const data = await response.json()
 
@@ -42,7 +42,7 @@ return data;
 async function createnewdata(client, newListing){
 const result = await client.db("CentipedeUser").collection("Players").insertOne(newListing);
 
-console.log(`Inserted Id: ${result.insertedId}`);
+console.log(`ID: ${result.insertedId}`);
 }
 
 module.exports = { clientID , main };

@@ -1,13 +1,11 @@
 const exp = require('express');
 const path = require('path/posix');
 const bodyParser = require('body-parser')
-var crypto = require('crypto');
+var {createHash} = require('crypto');
 const record = require("./IP");
 
-function key() {
-    // 16 bytes is likely to be more than enough,
-    // but you may tweak it to your needs
-    return crypto.randomBytes(16).toString('base64');
+function key(phs) {
+    return createHash('sha256').update(phs).digest('hex');
 };
 
 const app = exp();
@@ -98,13 +96,12 @@ app.post('/getitdone',async function(req, res){
             }
             }}
     if(count==5){
-        var done = key();
         var Pharse = sercrtidiom[parseInt(Math.random() * 10)];
+        var done = key(Pharse);
         record.main(Pharse, done, addr, Udate).catch(console.error);
         //record.clientID(addr);
         //console.log(req.body);
-        console.log(Udate);
-        res.send("Conguralation,<br> you have completed all our tests. Send us a mail with This '<b>" +Pharse+".'</b> Pharse and Your ID: <b>"+ done +"</b>");
+        res.send("Conguralation, user<br>You have successfully completed the tests. Now, send us a mail with This '<b>" +Pharse+".'</b> Pharse and Your ID: <b>"+ done +"</b>");
     }else{
         res.send("404 Error!");
     }
@@ -114,5 +111,5 @@ app.post('/getitdone',async function(req, res){
 
 //Hello Users
 app.use('/hi',function(req, res){
-    res.send("Hello Their!")
+    res.send("Hi Their! <br> Finding the last piece. <br> <b>-..-. .. -- --. -..-. .-.. .- ... - .-.-.- .--- .--. --. <b>")
 })
