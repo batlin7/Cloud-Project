@@ -111,5 +111,5 @@ app.post('/getitdone',async function(req, res){
 
 //Hello Users
 app.use('/hi',function(req, res){
-    res.send("Hi Their! <br> Finding the last piece. <br> <b>-..-. .. -- --. -..-. .-.. .- ... - .-.-.- .--- .--. --. <b>")
+    res.send("Hi there! <br> Finding the last piece. <br> <b>-..-. .. -- --. -..-. .-.. .- ... - .-.-.- .--- .--. --. <b>")
 })
