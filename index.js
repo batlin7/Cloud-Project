@@ -48,11 +48,11 @@ app.use('/getitdone',exp.static(path.join(__dirname + '/public/final')))
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-var validcode = [['T','O','U','C','H'],
-                ['R','E','A','D','Y'],
-                ['C','O','D','E','S'],
-                ['P','E','A','R','S'],
-                ['C','H','I','E','F']];
+var validcode = [['T','O','U','C','H'], //home
+                ['R','E','A','D','Y'], //binary
+                ['C','O','D','E','S'], //morse
+                ['P','E','A','R','S'], //rgb
+                ['C','H','I','E','F']]; //Illusion
 
 var sercrtidiom = ["The best of both worlds",
 "Speak of the devil",
@@ -112,4 +112,19 @@ app.post('/getitdone',async function(req, res){
 //Hello Users
 app.use('/hi',function(req, res){
     res.send("Hi there! <br> Finding the last piece. <br> <b>-..-. .. -- --. -..-. .-.. .- ... - .-.-.- .--- .--. --. <b>")
+})
+
+//Fetch Code
+app.get('/fetchimages',function(req, res){
+    const level = req.query.l;
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+    var arr = [['T.png','O.png','U.png','C.png','H.png'],['R.png','E.png','A.png','D.png','Y.png'],['C.png','O.png','D.png','E.png','S.png'],['P.png','E.png','A.png','R.png','S.png'],['C.png','H.png','I.png','E.png','F.png']];
+    var selected = getRandomInt(5);
+    r = {
+        img: "/img/"+arr[level][selected]
+    };
+
+    res.send(JSON.stringify(r));
 })
