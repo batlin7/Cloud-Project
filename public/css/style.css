@@ -80,13 +80,13 @@ transition: visibility 2s;
         width: 50%;
     }
     .img_container{
-        width: auto;
-        height: 80%;
+        width: 100%;
+        height: auto;
         padding-top: 5%;
     }
     .img_container img{
         width: 80%;
-        height: auto;
+        height: inherit;
         margin-right: auto;
         margin-left: auto;
         display: block;
