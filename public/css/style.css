@@ -114,8 +114,8 @@ transition: visibility 2s;
         margin-top: 100%;
     }
     .img_container{
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 50%;
         padding-top: 5%;
     }
     .img_container img{
