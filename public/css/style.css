@@ -90,7 +90,7 @@ transition: visibility 2s;
     }
     .img_container img{
         width: auto;
-        height: inherit;
+        height: auto;
         margin-right: auto;
         margin-left: auto;
         display: block;
@@ -120,7 +120,7 @@ transition: visibility 2s;
     }
     .img_container img{
         width: auto;
-        height: inherit;
+        height: auto;
         margin-right: auto;
         margin-left: auto;
         display: block;
@@ -144,13 +144,13 @@ transition: visibility 2s;
         margin-top: 100%;
     }
     .img_container{
-        width: 100%;
+        width: 95%;
         height: auto;
         padding-top: 5%;
     }
     .img_container img{
         width: auto;
-        height: inherit;
+        height: auto;
         margin-right: auto;
         margin-left: auto;
         display: block;
@@ -163,7 +163,7 @@ transition: visibility 2s;
     padding-top: 5%;
 }
 .img_container img{
-    width: 38%;
+    width: 50%;
     height: inherit;
     margin-right: auto;
     margin-left: auto;
