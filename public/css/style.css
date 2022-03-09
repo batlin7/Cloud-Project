@@ -119,7 +119,7 @@ transition: visibility 2s;
     }
   }
 
-@media only screen and (min-width: 770px) and (max-width: 1080px) {
+@media only screen and (min-width: 770px) {
     .msg{
         font-size: medium;
         padding-top: 10%;
@@ -151,7 +151,7 @@ transition: visibility 2s;
     padding-top: 5%;
 }
 .img_container img{
-    width: 50%;
+    width: 80%;
     height: inherit;
     margin-right: auto;
     margin-left: auto;
