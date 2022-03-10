@@ -93,14 +93,16 @@ transition: visibility 2s;
     }
   }
 
-@media only screen and (min-width:740px) and (max-width: 7px) {
+@media only screen and (min-width:740px) and (max-width: 1220px) {
     .msg{
         font-size: medium;
-        padding-top: 10%;
-        min-width: 20%;
-        max-width: 80%;
-        margin: 5%;
+        padding: 7px;
+        min-width: 15%;
+        max-width: 95%;
+        width: 80%;
+        margin: auto;
         margin-top: 0%;
+        padding-top: 8%;
     }
     .tooltip .tooltiptext{
         margin-top: 100%;
