@@ -93,7 +93,7 @@ transition: visibility 2s;
     }
   }
 
-@media only screen and (min-width:740px) and (max-width: 768px) {
+@media only screen and (min-width:740px) and (max-width: 7px) {
     .msg{
         font-size: medium;
         padding-top: 10%;
@@ -119,41 +119,30 @@ transition: visibility 2s;
     }
   }
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width:1280px)/*720p*/ and (max-width: 1920px)/*1080p*/ {
     .msg{
         font-size: medium;
-        padding-top: 10%;
+        padding: 10px;
         min-width: 20%;
         max-width: 95%;
-        margin: 5%;
+        width: 70%;
+        margin: auto;
         margin-top: 0%;
+        padding-top: 5%;
     }
     .tooltip .tooltiptext{
         margin-top: 100%;
     }
     .img_container{
-        width: auto;
-        height: 80%;
+        width: 100%;
+        height: auto;
         padding-top: 5%;
     }
     .img_container img{
         width: 80%;
-        height: auto;
+        height: inherit;
         margin-right: auto;
         margin-left: auto;
         display: block;
     }
-}
-
-.img_container{
-    width: 100%;
-    height: auto;
-    padding-top: 5%;
-}
-.img_container img{
-    width: 80%;
-    height: inherit;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
 }
