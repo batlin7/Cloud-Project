@@ -45,6 +45,14 @@ const result = await client.db("CentipedeUser").collection("Players").insertOne(
 console.log(`ID: ${result.insertedId}`);
 }
 
-module.exports = { clientID , main };
+async function getip(){
+  const addip = "https://api.ipify.org/?format=json";
+  const res = await fetch(addip);
+  const names = await res.json();
+
+  //console.log(JSON.stringify(names.ip));
+}
+
+module.exports = { clientID, getip , main };
 
 //main().catch(console.error);

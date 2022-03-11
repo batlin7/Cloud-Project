@@ -70,7 +70,8 @@ transition: visibility 2s;
         padding-top: 10%;
         min-width: 20%;
         max-width: 80%;
-        margin: 5%;
+        width: 80%;
+        margin: auto;
         margin-top: 0%;
     }
     .tooltip .tooltiptext{
@@ -125,7 +126,7 @@ transition: visibility 2s;
         padding: 10px;
         min-width: 20%;
         max-width: 95%;
-        width: 90%;
+        width: 60%;
         margin: auto;
         margin-top: 0%;
         padding-top: 5%;

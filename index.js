@@ -1,6 +1,6 @@
 const exp = require('express');
 const path = require('path/posix');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 var {createHash} = require('crypto');
 const record = require("./IP");
 
@@ -115,7 +115,7 @@ app.use('/hi',function(req, res){
 })
 
 //Fetch Code
-app.get('/fetchimages',function(req, res){
+app.use('/fetchimages',function(req, res){
     const level = req.query.l;
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
