@@ -79,13 +79,13 @@ transition: visibility 2s;
         width: 50%;
     }
     .img_container{
-        width: 100%;
+        width: auto;
         height: auto;
-        padding-top: 5%;
+        padding-top: 2%;
     }
     .img_container img{
-        width: 80%;
-        height: inherit;
+        width: 41%;
+        height: auto;
         margin-right: auto;
         margin-left: auto;
         display: block;
@@ -108,11 +108,11 @@ transition: visibility 2s;
     }
     .img_container{
         width: auto;
-        height: 80%;
-        padding-top: 5%;
+        height: auto;
+        padding-top: 2%;
     }
     .img_container img{
-        width: 80%;
+        width: 41%;
         height: auto;
         margin-right: auto;
         margin-left: auto;
@@ -135,13 +135,13 @@ transition: visibility 2s;
         margin-top: 100%;
     }
     .img_container{
-        width: 100%;
+        width: auto;
         height: auto;
-        padding-top: 5%;
+        padding-top: 2%;
     }
     .img_container img{
-        width: 80%;
-        height: inherit;
+        width: 41%;
+        height: auto;
         margin-right: auto;
         margin-left: auto;
         display: block;
