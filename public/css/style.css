@@ -1,7 +1,7 @@
 html, body{
     background-color: black;
     width: auto;
-    height: auto;
+    height:auto;
     margin: 0;
 }
 .msg{
@@ -17,7 +17,7 @@ html, body{
 }
 body {
     background: linear-gradient(-45deg, #000000, #2e2e2e, #525252, #727272);
-    background-size: inherit inherit;
+    background-size: 100% 100%;
     animation: gradient 15s ease infinite;
 }
 @keyframes gradient {
@@ -79,11 +79,13 @@ transition: visibility 2s;
         width: 50%;
     }
     .img_container{
-        width: auto;
+        width: 100%;
         height: auto;
-        padding: 2%;
+        padding-top: 5%;
     }
     .img_container img{
+        width: 80%;
+        height: inherit;
         margin-right: auto;
         margin-left: auto;
         display: block;
@@ -106,10 +108,12 @@ transition: visibility 2s;
     }
     .img_container{
         width: auto;
-        height: auto;
-        padding: 2%;
+        height: 80%;
+        padding-top: 5%;
     }
     .img_container img{
+        width: 80%;
+        height: inherit;
         margin-right: auto;
         margin-left: auto;
         display: block;
@@ -133,9 +137,11 @@ transition: visibility 2s;
     .img_container{
         width: auto;
         height: auto;
-        padding: 2%;
+        padding-top: 5%;
     }
     .img_container img{
+        width: 80%;
+        height: inherit;
         margin-right: auto;
         margin-left: auto;
         display: block;
