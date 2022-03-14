@@ -1,7 +1,6 @@
 html, body{
     background-color: black;
-    width: auto;
-    height:auto;
+    height:100%;
     margin: 0;
 }
 .msg{
@@ -79,16 +78,17 @@ transition: visibility 2s;
         width: 50%;
     }
     .img_container{
-        width: 100%;
-        height: auto;
-        padding-top: 5%;
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        padding: 2%;
     }
     .img_container img{
-        width: 80%;
+        width: 95%;
         height: inherit;
         margin-right: auto;
         margin-left: auto;
         display: block;
+        object-fit: contain;
     }
   }
 
@@ -107,16 +107,17 @@ transition: visibility 2s;
         margin-top: 100%;
     }
     .img_container{
-        width: auto;
-        height: 80%;
-        padding-top: 5%;
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        padding: 2%;
     }
     .img_container img{
-        width: 80%;
+        width: 95%;
         height: inherit;
         margin-right: auto;
         margin-left: auto;
         display: block;
+        object-fit: contain;
     }
   }
 
@@ -135,15 +136,16 @@ transition: visibility 2s;
         margin-top: 100%;
     }
     .img_container{
-        width: auto;
-        height: auto;
-        padding-top: 5%;
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        padding: 2%;
     }
     .img_container img{
-        width: 80%;
+        width: 95%;
         height: inherit;
         margin-right: auto;
         margin-left: auto;
         display: block;
+        object-fit: contain;
     }
 }
